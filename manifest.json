@@ -1,0 +1,16 @@
+{
+  "name": "UK Free Will Generator",
+  "short_name": "UK Will",
+  "description": "Legally valid UK Will generator for England & Wales",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3534/3534033.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "UK Free Will Generator",
+  "description": "A professional, legally-compliant wizard-based web application for generating valid UK Wills (England & Wales) with optional donation integration and high-quality PDF output.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>UK Free Will Generator | Legally Valid Wills (England & Wales)</title>
+    <meta name="description" content="Create a professional, legally valid UK Will in under 15 minutes. Trusted by thousands across England & Wales.">
+    
+    <!-- Geo-Targeting for UK SEO -->
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London" />
+    <meta name="theme-color" content="#2563eb">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ukfreewill.co.uk/">
+    <meta property="og:title" content="UK Free Will Generator">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; background-color: #f8fafc; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .animate-fade-in { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Loading Spinner */
+        #app-loader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #f8fafc; z-index: 9999;
+            display: flex; align-items: center; justify-content: center; flex-direction: column;
+            transition: opacity 0.5s ease-out;
+        }
+        .spinner {
+            width: 50px; height: 50px; border: 4px solid #e2e8f0;
+            border-top-color: #2563eb; border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    
+    <script>
+      // Robust Polyfill for process.env
+      (function() {
+        if (typeof window !== 'undefined') {
+            window.process = window.process || {};
+            window.process.env = window.process.env || {};
+            window.process.env.API_KEY = window.process.env.API_KEY || "";
+        }
+      })();
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "jspdf": "https://esm.sh/jspdf@^4.1.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "jszip": "https://esm.sh/jszip@^3.10.1"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+    <!-- Initial Loader -->
+    <div id="app-loader">
+        <div class="spinner"></div>
+        <p style="margin-top: 20px; color: #64748b; font-size: 0.9rem; font-weight: 500;">Initializing Secure Environment...</p>
+    </div>
+
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- App Entry -->
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
