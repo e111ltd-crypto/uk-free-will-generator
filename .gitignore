@@ -1,0 +1,11 @@
+# Node.js
+node_modules/
+
+# Environment variables
+.env
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
